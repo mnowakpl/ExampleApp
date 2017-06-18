@@ -1,0 +1,22 @@
+﻿<Window x:Class="ExampleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExampleApp"
+        xmlns:vm="clr-namespace:ExampleApp.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.DataContext>
+        <vm:VmMainWindow/>
+    </Window.DataContext>
+    <Grid>
+        <TextBlock x:Name="TitleName" HorizontalAlignment="Center" Margin="0,40,0,0" FontSize="30px" TextAlignment="Center" Text="Choose a figure" VerticalAlignment="Top"/>
+        <Button x:Name="TriangleButton" Content="Triangle" Command="{Binding CmdTriangleOpen}" HorizontalAlignment="Left" Margin="40,227,0,0" VerticalAlignment="Top" Width="100" Height="35" FontSize="18px"/>
+        <Button x:Name="SquareButton" Content="Square" Command="{Binding CmdSquareOpen}" HorizontalAlignment="Stretch" Margin="40,227,40,0" VerticalAlignment="Top" Width="100" Height="35" FontSize="18px"/>
+        <Button x:Name="CircleButton" Content="Circle" Command="{Binding CmdCircleOpen}" HorizontalAlignment="Right" Margin="0,227,40,0" VerticalAlignment="Top" Width="100" Height="35" FontSize="18px" />
+        <Image x:Name="CircleImg" HorizontalAlignment="Right" Height="100" Margin="0,113,40,0" VerticalAlignment="Top" Width="100" Source="/Images/Circle.png"/>
+        <Image x:Name="SquareImg" HorizontalAlignment="Stretch" Height="100" Margin="40,113,40,0" VerticalAlignment="Top" Width="100" Source="/Images/Square.png"/>
+        <Image x:Name="TriangleImg" HorizontalAlignment="Left" Height="100" Margin="40,113,0,0" VerticalAlignment="Top" Width="100" Source="/Images/Triangle.png"/>
+    </Grid>
+</Window>

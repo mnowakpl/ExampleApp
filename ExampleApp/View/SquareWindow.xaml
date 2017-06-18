@@ -1,0 +1,21 @@
+﻿<Window x:Class="ExampleApp.View.SquareWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExampleApp.View"
+        xmlns:zm="clr-namespace:ExampleApp.ViewModel"
+        mc:Ignorable="d"
+        Title="SquareWindow" Height="170" Width="300">
+    <Window.DataContext>
+        <zm:VmSquareWindow/>
+    </Window.DataContext>
+    <Grid>
+        <Button x:Name="CalculateButtonS" Command="{Binding CmdCalculateSq}" Content="Calculate" HorizontalAlignment="Left" Margin="40,75,0,0" VerticalAlignment="Top" Width="80" Height="35" />
+        <Button x:Name="CancelButtonS" Content="Cancel" IsCancel="True" HorizontalAlignment="Right" Margin="0,75,40,0" VerticalAlignment="Top" Width="80" Height="35" />
+        <TextBlock x:Name="Info1S" HorizontalAlignment="Left" Margin="20,14,0,0" Text="Please enter side your square" VerticalAlignment="Top"/>
+        <TextBox x:Name="AddSide" Text="{Binding Side}" HorizontalAlignment="Right" Height="23" Margin="0,10,50,0" VerticalAlignment="Top" Width="50" />
+        <TextBlock x:Name="Info2S" HorizontalAlignment="Left" Margin="80,39,0,0" Text="Field your square:" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBlock x:Name="SqField" Text="{Binding Result}" HorizontalAlignment="Right" Height="23" Margin="0,40,50,0" VerticalAlignment="Top" Width="50" />
+    </Grid>
+</Window>
